@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+    color: #A9A9A9;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: #FBFAF5;
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+button {
+    cursor: pointer;
+    font-size: 1.8rem;
+    border: none;
+    outline: none;
+    background-color: #1f1f1f;
+}
+
+button:hover {
+    background-color: #303030;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.white {
+    color: #F7FDFF;
+}
+
+.orange {
+    color: #8cf229;
+    font-size: 2rem;
+}
+
+.colored {
+    font-size: 2.5rem;
+    color: #F7FDFF;
+    background-color: #8cf229;
+}
+
+.colored:hover {
+    background-color: #f2ac29;
+}
+
+.output {
+    background-color: #1f1f1f;
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 13px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-operand {
+    color: #A9A9A9;
+    font-size: 1.3rem;
+}
+
+.output .current-operand {
+    color: #F7FDFF;
+    font-size: 3rem;
+}
